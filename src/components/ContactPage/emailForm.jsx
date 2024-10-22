@@ -49,7 +49,7 @@ function ContactForm() {
             id="last_name"
             className="w-full border-b-2 border-custom-orange focus:outline-none focus:border-green-700 text-gray-900 py-2"
             required
-          />
+          />  
         </div>
       </div>
       <div className="mt-6">

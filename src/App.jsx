@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Oilmill from './components/OilmillPage/oilmillpage';
 import Contact from './components/ContactPage/contact';
+import WhatsApp from './components/ContactPage/whatsapp';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
 
     </Routes>
+    <WhatsApp/>
     <Footer/>
     </Router>
   );

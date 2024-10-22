@@ -5,15 +5,15 @@ function Oilmill() {
   return (
     <div className="flex flex-col items-center bg-white text-black p-4">
       <div className="w-full max-w-[80rem]">
-        <h1 className="bg-custom-orange text-white text-center text-3xl mt-10 p-4 font-serif font-bold rounded-lg">
+        <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl  p-4 font-serif font-bold ">
           Oil Mill
         </h1>
         <img
-          className="h-auto w-full rounded-[22px] mt-5"
+          className=" h-72 md:h-[40rem] w-full "
           src={neeramoilmill}
           alt="Neeram Oilmill"
         />
-        <div className="mt-10 font-sans text-xl md:text-2xl px-4">
+        <div className="mt-10 font-sans text-xl md:text-2xl px-4 mb-10">
           <span>
             Neeram has the necessary infrastructure to mechanically manufacture,
             pack, and market roasted coconut oil with a capacity of crushing 15

@@ -8,7 +8,7 @@ import { FiYoutube } from "react-icons/fi";
 function Footer() {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center bg-gray-300 md:h-32 p-4">
-      <img className="w-28 h-24 mb-4 md:mb-0 ml-0 lg:ml-20" src={logo} alt="Neeram Logo" />
+      <img className="w-36 h-24 mb-4 md:mb-0 ml-0 lg:ml-20" src={logo} alt="Neeram Logo" />
       <h1 className="text-center text-lg">
         Copyright © 2024{" "}
         <span className="text-orange-900 font-bold">
