@@ -9,14 +9,14 @@ function About() {
   return (
     <div className="flex justify-center bg-white text-black  p-4">
       <div className="w-full max-w-[80rem]">
-        <h1 className="bg-custom-orange text-white text-center text-3xl p-3 font-serif font-bold rounded-lg">
+        <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl  p-3 font-serif font-bold ">
           About Us
         </h1>
-        <div className="border border-black rounded-xl">
+        <div className="border border-black r">
           <img className="mx-auto" src={Logo} alt="Neeram Logo"/>
           <div className="max-w-6xl mx-6  mb-10 mt-6">
-            <h1 className="leading-relaxed text-justify text-2xl">
-              <span className="text-custom-orange font-bold text-5xl">N</span>
+            <h1 className="leading-relaxed text-justify text-lg md:text-2xl ">
+              <span className="text-custom-orange font-bold text-3xl md:text-5xl">N</span>
               <span className="text-custom-orange font-bold text-2xl">
                 eeram Coconut Industries Private Limited
               </span>
@@ -51,7 +51,7 @@ function About() {
                 Neeram’s story began with an aim to standardise cold pressed
                 oils and make it the go-to choice like earlier days.
               </span>
-              <div className="flex justify-items-start mt-10 font-sans text-2xl">
+              <div className="flex justify-items-start mt-10 font-sans text-xl md:text-2xl">
                 Oils are the most important for cooking. But commonly used
                 refined oils are the most harmful for health. So Neeram’s
                 founder set out to bring a solution. Here’s how it all began.
@@ -60,10 +60,10 @@ function About() {
           </div>
         </div>
 
-        <h1 className="bg-custom-orange text-white text-center text-3xl p-3 mt-20 font-serif font-bold rounded-lg">
+        <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl p-3 mt-10 font-serif font-bold">
           Certificates
         </h1>
-        <div className="flex flex-wrap  justify-center gap-10 mt-16  ">
+        <div className="flex flex-wrap  justify-center gap-10 mt-10 mb-10  ">
           <img
             src={certificate1}
             alt="neeram certificate"

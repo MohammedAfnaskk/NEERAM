@@ -8,49 +8,64 @@ import img3 from "../../assets/ContentImg/image (4).png";
 import img4 from "../../assets/ContentImg/image (5).png";
 import img5 from "../../assets/ContentImg/image (6).png";
 import img6 from "../../assets/ContentImg/image (7).png";
-
+import Carousel from "./carousel";
 function Content() {
   return (
     <div className="flex flex-col items-center bg-white text-black p-4">
       <div className="w-full max-w-[80rem]">
-        <img
-          className="h-auto md:h-[45rem]  w-full  bg-custom-orange"
-          src={NeeramAdd}
-          alt=""
-        />
+        <Carousel className="h-72 md:h-[40rem]  bg-custom-orange" />
 
-        <h1 className="bg-custom-orange text-white text-center text-3xl p-3 mt-16 font-serif font-bold w-full">
+        <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl p-3 mt-5 md:mt-10 font-serif font-bold w-full">
           Our Products
         </h1>
-        <div className="flex flex-wrap justify-center mt-14 gap-8">
+
+        <div className="flex flex-wrap justify-center mt-14 gap-8 ">
+      <div className="overflow-x-auto w-full justify-center">
+        <div className="flex gap-6 justify-start md:justify-center items-center">
           {[...Array(3)].map((_, index) => (
-            <div key={index} className="text-center">
-              <img className="h-60" src={Neeram} alt="" />
-              <h1 className="font-bold">
-                Neeram high grade coconut oil 200 ml
-              </h1>
-              <h1 className="font-bold text-orange-800">$100</h1>
+            <div key={index} className="flex-shrink-0 w-60">
+              {/* <!-- Card --> */}
+              <div className="block  bg-white shadow-md dark:bg-neutral-700 text-left overflow-hidden">
+                {/* <!-- Card image with zoom effect --> */}
+                <a href="#!" className="group">
+                  <img
+                    className=" transform transition duration-500 ease-in-out group-hover:scale-110  object-cover"
+                    src={Neeram}
+                    alt=""
+                  />
+                </a>
+
+                {/* <!-- Card body --> */}
+                <div className="p-4">
+                  {/* <!-- Title --> */}
+                  <h5 className="mb-2 text-base font-bold tracking-wide text-neutral-800 dark:text-neutral-50">
+                    Neeram Coconut Oil
+                  </h5>
+                </div>
+              </div>
+              {/* <!-- Card --> */}
             </div>
           ))}
         </div>
+      </div>
+    </div>
 
-        <h1 className="bg-custom-orange text-white text-center text-3xl p-3 mt-16 font-serif font-bold w-full">
+        <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl p-3 mt-8 md:mt-10 font-serif font-bold w-full">
           High Grade Coconut Oil
         </h1>
-        <div className="flex flex-col md:flex-row justify-center items-center mt-10 gap-8">
+        <div className="flex flex-col md:flex-row justify-center items-center  gap-8">
           <img className="w-80" src={coconut} alt="" />
-          <h1 className="text-2xl md:text-4xl mt-0 md:mt-16 font-serif text-balance">
-            High Grade/Roasted coconut oil is unique and offered 
-            only by Neeram in the entire coastal Karnataka market.
-            Copra is fully dried and roasted before oil extraction. It
-            brings out the great aroma and sweet taste of copra. Use
-            of high grade copra, removing moisture and sterilisation 
-            increases the shelf life of coconut oil. Oil is golden yellow
-            in colour and is highly recommended for cooking.
+          <h1 className="text-2xl md:text-4xl mt-0 md:mt-16 font-serif text-balance p-4">
+            High Grade/Roasted coconut oil is unique and offered only by Neeram
+            in the entire coastal Karnataka market. Copra is fully dried and
+            roasted before oil extraction. It brings out the great aroma and
+            sweet taste of copra. Use of high grade copra, removing moisture and
+            sterilisation increases the shelf life of coconut oil. Oil is golden
+            yellow in colour and is highly recommended for cooking.
           </h1>
         </div>
 
-        <h1 className="bg-custom-orange text-white text-center text-3xl p-3 mt-14 font-serif font-bold w-full">
+        <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl p-3 mt-14 font-serif font-bold w-full">
           Why Neeram
         </h1>
 
@@ -102,7 +117,7 @@ function Content() {
           ))}
         </div>
 
-        <h1 className="bg-custom-orange text-white text-center text-3xl p-3 mt-14 font-serif font-bold w-full">
+        <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl p-3 mt-14 font-serif font-bold w-full">
           Contact Us
         </h1>
         <div className="flex flex-col md:flex-row mt-14 justify-center items-center gap-10">
