@@ -12,7 +12,7 @@ import WhatsApp from './components/ContactPage/whatsapp';
 function App() {
   return (
     <Router> 
-    <div className='bg-purple-700'>
+    <div>
      <Navbar/>  
     </div>
     <Routes>

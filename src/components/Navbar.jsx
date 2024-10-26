@@ -13,9 +13,9 @@ const navLinks = [
 
 const NavItems = () => {
   return (
-    <ul className="nav-ul flex flex-col gap-4 sm:flex-row">
+    <ul className="nav-ul flex flex-col gap-4 sm:flex-row ">
       {navLinks.map(({ id, href, name }) => (
-        <li key={id} className="nav-li">
+        <li key={id} className="nav-li text-back hover:text-custom-orange">
           <Link to={href} className="nav-li_a" onClick={() => {toggleMenu}}>
             {name}
              
@@ -32,9 +32,9 @@ function Navbar() {
   const toggleMenu = () => setIsOpen((prevIsOpen) => !prevIsOpen);
 
   return (
-    <div className="text-center  bg-gray-300">
+    <div className="text-center  bg-gray-50 border-b-2 border-b-gray-200  z-50 fixed w-full ">
       <div className="ml-3 sm:ml-18 md:ml-20 lg:ml-28 flex justify-between items-center">
-        <img className="w-36" src={logo} alt="Neeram Logo" />
+        <img className="w-28 md:w-36" src={logo} alt="Neeram Logo" />
 
         {/* Mobile Menu Toggle Button */}
         <button
@@ -54,7 +54,7 @@ function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="nav-sidebar sm:hidden">
-          <nav className="p-5 bg-gray-300">
+          <nav className="p-5 bg-gray-200">
             <NavItems toggleMenu={toggleMenu} />
           </nav>
         </div>

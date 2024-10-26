@@ -1,26 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Neeram from "../../assets/Carousel/Neeram.jpg";
-import neeramimage from "../../assets/ContentImg/neeramimage.jpeg"
 
-const images = [
-  {
-    id: 1,
-    src: Neeram,
-    alt: "Slide 1",
-  },
-  {
-    id: 2,
-    src: neeramimage,
-    alt: "Slide 2",
-  },
-  {
-    id: 3,
-    src: Neeram,
-    alt: "Slide 3",
-  },
-];
-
-export default function CarouselComponent() {
+export default function CarouselComponent({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Automatically switch images every 3 seconds
@@ -49,20 +29,20 @@ export default function CarouselComponent() {
   };
 
   return (
-    <div className="relative  mx-auto">
+    <div className="relative  mx-auto ">
       {/* Carousel images */}
       <div className="overflow-hidden relative h-72  md:h-[40rem]">
         <img
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
-          className="w-full h-full object-cover transition-opacity duration-700 ease-in-out"
+          className="w-full h-full  transition-opacity duration-700 ease-in-out"
         />
       </div>
 
       {/* Previous Button */}
       <button
         onClick={goToPrevious}
-        className="hidden md:block absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70"
+        className="hidden md:block absolute top-1/2 left-4 transform -translate-y-1/2  text-white p-2 rounded-full hover:bg-black/70"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -83,8 +63,8 @@ export default function CarouselComponent() {
       {/* Next Button */}
       <button
         onClick={goToNext}
-        className="hidden md:block absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70"
-        >
+        className="hidden md:block absolute top-1/2 right-4 transform -translate-y-1/2  text-white p-2 rounded-full hover:bg-black/70"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

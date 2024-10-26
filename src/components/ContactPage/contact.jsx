@@ -4,7 +4,7 @@ import location from "../../assets/location.png";
 function ContactPage() {
   return (
     <div className="flex flex-col items-center bg-white text-black p-4 md:mb-5">
-      <div className="w-full max-w-[80rem]">
+      <div className="w-full max-w-[80rem]  mt-20 md:mt-28">
         <h2 className="text-3xl font-bold text-center mt-6 md:mb-8 ">
           Contact us
         </h2>

@@ -1,7 +1,6 @@
 import React from "react";
 import Neeram from "../../assets/ContentImg/NeeramPic.png";
 import coconut from "../../assets/ContentImg/Coconut.png";
-import NeeramAdd from "../../assets/Carousel/Neeram.jpg";
 import img1 from "../../assets/ContentImg/image (1).png";
 import img2 from "../../assets/ContentImg/image (2).png";
 import img3 from "../../assets/ContentImg/image (4).png";
@@ -9,46 +8,56 @@ import img4 from "../../assets/ContentImg/image (5).png";
 import img5 from "../../assets/ContentImg/image (6).png";
 import img6 from "../../assets/ContentImg/image (7).png";
 import Carousel from "./carousel";
+import Neeramadd1 from "../../assets/Carousel/Neeram.jpg";
+import Neeramadd2 from "../../assets/Carousel/neeram add2.png";
+import Neeramadd3 from "../../assets/Carousel/neeram add3.png";
+
+const homeImages = [
+  { id: 1, src: Neeramadd1, alt: "Home Slide 1" },
+  { id: 2, src: Neeramadd2, alt: "Home Slide 2" },
+  { id: 3, src: Neeramadd3, alt: "Home Slide 3" },
+];
+
 function Content() {
   return (
     <div className="flex flex-col items-center bg-white text-black p-4">
-      <div className="w-full max-w-[80rem]">
-        <Carousel className="h-72 md:h-[40rem]  bg-custom-orange" />
+      <div className="w-full max-w-[80rem] mt-20 md:mt-24">
+        <Carousel images={homeImages} className="h-72 md:h-[40rem]  bg-custom-orange" />
 
         <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl p-3 mt-5 md:mt-10 font-serif font-bold w-full">
           Our Products
         </h1>
 
         <div className="flex flex-wrap justify-center mt-14 gap-8 ">
-      <div className="overflow-x-auto w-full justify-center">
-        <div className="flex gap-6 justify-start md:justify-center items-center">
-          {[...Array(3)].map((_, index) => (
-            <div key={index} className="flex-shrink-0 w-60">
-              {/* <!-- Card --> */}
-              <div className="block  bg-white shadow-md dark:bg-neutral-700 text-left overflow-hidden">
-                {/* <!-- Card image with zoom effect --> */}
-                <a href="#!" className="group">
-                  <img
-                    className=" transform transition duration-500 ease-in-out group-hover:scale-110  object-cover"
-                    src={Neeram}
-                    alt=""
-                  />
-                </a>
+          <div className="overflow-x-auto w-full justify-center">
+            <div className="flex gap-6 justify-start md:justify-center items-center">
+              {[...Array(3)].map((_, index) => (
+                <div key={index} className="flex-shrink-0 w-60">
+                  {/* <!-- Card --> */}
+                  <div className="block  bg-white shadow-md dark:bg-neutral-700 text-left overflow-hidden">
+                    {/* <!-- Card image with zoom effect --> */}
+                    <a href="#!" className="group">
+                      <img
+                        className=" transform transition duration-500 ease-in-out group-hover:scale-110  object-cover"
+                        src={Neeram}
+                        alt=""
+                      />
+                    </a>
 
-                {/* <!-- Card body --> */}
-                <div className="p-4">
-                  {/* <!-- Title --> */}
-                  <h5 className="mb-2 text-base font-bold tracking-wide text-neutral-800 dark:text-neutral-50">
-                    Neeram Coconut Oil
-                  </h5>
+                    {/* <!-- Card body --> */}
+                    <div className="p-4">
+                      {/* <!-- Title --> */}
+                      <h5 className="mb-2 text-base font-bold tracking-wide text-neutral-800 dark:text-neutral-50">
+                        Neeram Coconut Oil
+                      </h5>
+                    </div>
+                  </div>
+                  {/* <!-- Card --> */}
                 </div>
-              </div>
-              {/* <!-- Card --> */}
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </div>
 
         <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl p-3 mt-8 md:mt-10 font-serif font-bold w-full">
           High Grade Coconut Oil
@@ -129,15 +138,15 @@ function Content() {
               <br /> Anakkallu Rd, Anakkallu, Kerala 671541 <br /> F6RR+CHV
               Anakkallu, Kerala
             </h1>
-            <h1 className="text-xl mt-5 text-orange-800">
-              <span className="font-bold text-black">Phone : </span>+91 97478
-              44455
+            <h1 className="text-xl mt-5 text-orange-800 hover:text-custom-orange">
+              <span className="font-bold text-black">Phone : </span>
+              <a href="tel:+919747844455">+91 97478 44455</a>
             </h1>
-            <h1 className="text-xl mt-5 text-orange-800">
+            <h1 className="text-xl mt-5 text-orange-800 hover:text-custom-orange">
               <span className="font-bold text-black">Email :</span>{" "}
               <a
                 href="mailto:sharathksasikumar@gmail.com"
-                className="text-orange-800"
+                 
               >
                 sharathksasikumar@gmail.com
               </a>
