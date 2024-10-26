@@ -16,7 +16,7 @@ function Footer() {
         </span>
         . All Rights Reserved.
       </h1>
-      <div className="flex gap-6 mt-4 md:mt-0 text-2xl mr-0 lg:mr-20">
+      <div className="flex gap-6 mt-4 md:mt-0 text-2xl mr-0 md:mr-28">
         <a href="#" aria-label="Instagram" className="hover:text-orange-900 transition-colors">
           <FaInstagram />
         </a>
@@ -26,9 +26,7 @@ function Footer() {
         <a href="#" aria-label="Twitter" className="hover:text-orange-900 transition-colors">
           <FaXTwitter />
         </a>
-        <a href="#" aria-label="YouTube" className="hover:text-orange-900 transition-colors">
-          <FiYoutube />
-        </a>
+        
       </div>
     </div>
   );

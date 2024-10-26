@@ -8,7 +8,7 @@ import certificate3 from "../../assets/Certificats/neeram certificate 3.jpeg";
 function About() {
   return (
     <div className="flex justify-center bg-white text-black  p-4">
-      <div className="w-full max-w-[80rem]">
+      <div className="w-full max-w-[80rem]  mt-20 md:mt-28">
         <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl  p-3 font-serif font-bold ">
           About Us
         </h1>

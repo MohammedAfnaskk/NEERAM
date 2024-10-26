@@ -1,18 +1,22 @@
 import React from "react";
-import neeramoilmill from "../../assets/ContentImg/neeram oilmill.jpeg";
+import Carousel from "../HomePage/carousel";
+import OilMillImage1 from "../../assets/Carousel/neeram oilmill.jpeg";
+import OilMillImage2 from "../../assets/Carousel/neeram oilmill.png";
+ 
+const oilMillImages = [
+  { id: 1, src: OilMillImage1, alt: "Oil Mill Slide 1" },
+  { id: 2, src: OilMillImage2, alt: "Oil Mill Slide 2" },
+ ];
 
 function Oilmill() {
   return (
-    <div className="flex flex-col items-center bg-white text-black p-4">
-      <div className="w-full max-w-[80rem]">
+    <div className="flex flex-col items-center bg-white text-black p-4 ">
+      <div className="w-full max-w-[80rem]  mt-20 md:mt-28">
         <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl  p-4 font-serif font-bold ">
           Oil Mill
         </h1>
-        <img
-          className=" h-72 md:h-[40rem] w-full "
-          src={neeramoilmill}
-          alt="Neeram Oilmill"
-        />
+        <Carousel images={oilMillImages} className="h-72 md:h-[40rem]  bg-custom-orange" />
+
         <div className="mt-10 font-sans text-xl md:text-2xl px-4 mb-10">
           <span>
             Neeram has the necessary infrastructure to mechanically manufacture,
