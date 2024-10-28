@@ -8,7 +8,7 @@ import img4 from "../../assets/ContentImg/image (5).png";
 import img5 from "../../assets/ContentImg/image (6).png";
 import img6 from "../../assets/ContentImg/image (7).png";
 import Carousel from "./carousel";
-import Neeramadd1 from "../../assets/Carousel/Neeram.jpg";
+import Neeramadd1 from "../../assets/Carousel/neeram add1.jpeg";
 import Neeramadd2 from "../../assets/Carousel/neeram add2.png";
 import Neeramadd3 from "../../assets/Carousel/neeram add3.png";
 
