@@ -1,5 +1,9 @@
 import React from "react";
-import Neeram from "../../assets/ContentImg/NeeramPic.png";
+import Neeram1 from "../../assets/ContentImg/NeeramPic.png";
+import Neeram2 from "../../assets/ContentImg/neeram Oil.jpg";
+import Neeram3 from "../../assets/ContentImg/neeram 500ml.jpg";
+import Neeram4 from "../../assets/ContentImg/neeram oil 500ml.jpg";
+
 import coconut from "../../assets/ContentImg/Coconut.png";
 import img1 from "../../assets/ContentImg/image (1).png";
 import img2 from "../../assets/ContentImg/image (2).png";
@@ -18,46 +22,79 @@ const homeImages = [
   { id: 3, src: Neeramadd3, alt: "Home Slide 3" },
 ];
 
+const neeramImages = [
+  {
+    id: 1,
+    src: Neeram1,
+    alt: "Neeram oil 1L",
+    title: "Neeram Coconut Oil 1L",
+    price: 280,
+  },
+  {
+    id: 2,
+    src: Neeram2,
+    alt: "Neeram oil 1L",
+    title: "Neeram Coconut Oil 1L",
+    price: 230,
+  },
+  {
+    id: 3,
+    src: Neeram3,
+    alt: "Neeram oil 500ml",
+    title: "Neeram Coconut Oil 500ml",
+    price: 140,
+  },
+  {
+    id: 4,
+    src: Neeram4,
+    alt: "Neeram oil 1L",
+    title: "Neeram Coconut Oil 500ml",
+    price: 130,
+  },
+];
+
 function Content() {
   return (
     <div className="flex flex-col items-center bg-white text-black p-4">
       <div className="w-full max-w-[80rem] mt-20 md:mt-24">
-        <Carousel images={homeImages} className="h-72 md:h-[40rem]  bg-custom-orange" />
+        <Carousel
+          images={homeImages}
+          className="h-72 md:h-[40rem]  bg-custom-orange"
+        />
 
         <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl p-3 mt-5 md:mt-10 font-serif font-bold w-full">
           Our Products
         </h1>
 
-        <div className="flex flex-wrap justify-center mt-14 gap-8 ">
-          <div className="overflow-x-auto w-full justify-center">
-            <div className="flex gap-6 justify-start md:justify-center items-center">
-              {[...Array(3)].map((_, index) => (
-                <div key={index} className="flex-shrink-0 w-60">
-                  {/* <!-- Card --> */}
-                  <div className="block  bg-white shadow-md dark:bg-neutral-700 text-left overflow-hidden">
-                    {/* <!-- Card image with zoom effect --> */}
-                    <a href="#!" className="group">
-                      <img
-                        className=" transform transition duration-500 ease-in-out group-hover:scale-110  object-cover"
-                        src={Neeram}
-                        alt=""
-                      />
-                    </a>
+        <div className="flex flex-wrap justify-center mt-14 gap-8">
+  <div className="overflow-x-auto w-full justify-center">
+    <div className="flex gap-6 justify-start md:justify-center items-center">
+      {neeramImages.map((image) => (
+        <div key={image.id} className="flex-shrink-0 h-96">
+          <div className="block bg-gray-50 border dark:bg-neutral-700 text-left overflow-hidden w-full h-full">
+            <a href="#!" className="group">
+              <img
+                className="transform transition duration-500 ease-in-out group-hover:scale-110 hover:cursor-pointer w-full h-3/4" // Fixed image size
+                src={image.src}
+                alt={image.alt}
+              />
+            </a>
 
-                    {/* <!-- Card body --> */}
-                    <div className="p-4">
-                      {/* <!-- Title --> */}
-                      <h5 className="mb-2 text-base font-bold tracking-wide text-neutral-800 dark:text-neutral-50">
-                        Neeram Coconut Oil
-                      </h5>
-                    </div>
-                  </div>
-                  {/* <!-- Card --> */}
-                </div>
-              ))}
+            <div className="p-4 h-1/3 flex flex-col justify-center">
+              <h5 className="mb-1 text-base font-bold tracking-wide text-neutral-800 dark:text-neutral-50 text-center">
+                {image.title}
+              </h5>
+              <p className="mb-2 font-extrabold tracking-wide text-center">
+                Rs: {image.price}
+              </p>
             </div>
           </div>
         </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
         <h1 className="bg-custom-orange text-white text-center text-2xl md:text-3xl p-3 mt-8 md:mt-10 font-serif font-bold w-full">
           High Grade Coconut Oil
@@ -144,10 +181,7 @@ function Content() {
             </h1>
             <h1 className="text-xl mt-5 text-orange-800 hover:text-custom-orange">
               <span className="font-bold text-black">Email :</span>{" "}
-              <a
-                href="mailto:sharathksasikumar@gmail.com"
-                 
-              >
+              <a href="mailto:sharathksasikumar@gmail.com">
                 sharathksasikumar@gmail.com
               </a>
             </h1>

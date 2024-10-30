@@ -53,8 +53,8 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="nav-sidebar sm:hidden">
-          <nav className="p-5 bg-gray-200">
+         <div className="nav-sidebar absolute right-0 w-44   sm:hidden">
+      <nav className="p-5 bg-gray-50 rounded-b-md   ">
             <NavItems toggleMenu={toggleMenu} />
           </nav>
         </div>
