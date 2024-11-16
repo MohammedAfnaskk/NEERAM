@@ -31,7 +31,7 @@ export default function CarouselComponent({ images }) {
   return (
     <div className="relative  mx-auto ">
       {/* Carousel images */}
-      <div className="overflow-hidden relative h-72  md:h-[40rem]">
+      <div className="overflow-hidden relative h-72  md:h-[39rem]">
         <img
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}

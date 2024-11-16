@@ -46,7 +46,7 @@ function ContactPage() {
                        shadow-md hover:bg-green-700 transition"
                 >
                   Click to View Our Location
-                  <img src={location} alt="Location" className=" h-10 mr-3 " />
+                  <img src={location} alt="Location" className=" h-5  ml-3 " />
                 </button>
               </a>
             </div>
